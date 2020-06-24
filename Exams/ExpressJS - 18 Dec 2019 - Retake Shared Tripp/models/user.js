@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
         validate: {
             validator: function (v) {
                 const pattern = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/gi;
-                return v == null || v.trim().length < 1 || pattern.test(v)
+                return pattern.test(v)
             },
             message: `The email should be in the following format (mailboxname @ domainname) -  "username@domain.bg"`
         }

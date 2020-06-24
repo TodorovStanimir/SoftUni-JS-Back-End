@@ -53,7 +53,7 @@ const TripSchema = new Schema({
         validate: {
             validator: function (v) {
                 const pattern = /^(https:\/\/|http:\/\/){1}[\w\W]+$/gi;
-                return v == null || v.trim().length < 1 || pattern.test(v)
+                return pattern.test(v)
             },
             message: `The CarImage - should be actual link refering to the car image`
         }
