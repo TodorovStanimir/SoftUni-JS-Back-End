@@ -21,7 +21,7 @@ module.exports = {
                     pageTitle: 'Sharred Tripps Page',
                     tripps
                 };
-                res.render('shared-tripps.hbs', hbsObject);
+                res.render('sharedTripps.hbs', hbsObject);
             } catch (error) {
                 const hbsObject = {
                     pageTitle: 'Not Found Page',
