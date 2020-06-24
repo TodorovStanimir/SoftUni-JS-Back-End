@@ -1,4 +1,4 @@
-# ExpressJS - 18 Dec 2019 - Retake Shared Tripp with Mongoose Atlas
+# ExpressJS - 18 Dec 2019 - Retake Shared Tripp with MongoDB Atlas
 
 
 ## There are two options to start project
