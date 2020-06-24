@@ -41,19 +41,15 @@ module.exports = {
                 const tripId = req.params.id;
                 const userId = req.user._id;
 
-                const trip = await Trip.findById(tripId).populate('buddies').lean();
-                const user = await User.findById(userId).lean();
-                const driver = await User.findOne({ trippsHistory: { $in: tripId } }).select('email').lean();
+                const trip = await Trip.findById(tripId).populate('buddies creator').lean();
                 const isAlreadyJoined = trip.buddies.length > 0 ? trip.buddies.map(user => user._id.toString()).includes(userId.toString()) : false;
                 trip.buddies = trip.buddies.length > 0 ? trip.buddies.map(buddy => buddy.email).join(', ') : '. . . . .'
 
                 const hbsObject = {
                     pageTitle: 'Details Trip Page',
                     trip,
-                    user,
-                    driver,
                     isAlreadyJoined,
-                    isDriver: user.trippsHistory.map(trip => trip._id.toString()).includes(tripId),
+                    isDriver: trip.creator._id.toString()===userId.toString(),
                     isThereFreeSeats: trip.seats > 0
                 }
                 res.render('tripDetails.hbs', hbsObject);
@@ -72,6 +68,7 @@ module.exports = {
 
             try {
                 await Trip.findByIdAndUpdate(tripId, { $inc: { seats: -1 }, $push: { buddies: userId } });
+                await User.findByIdAndUpdate(userId, { $push: { trippsHistory: tripId } });
                 res.redirect('/shared-tripps');
             } catch (error) {
                 res.render('404', { errors: [error.message] })
@@ -128,12 +125,10 @@ module.exports = {
                 const [date, time] = dateTime.split(' - ');
                 const userId = req.user._id;
 
-                const newTrip = new Trip({ startingPoint, endPoint, date, time, carImage, description, seats });
-                const tripId = newTrip._id;
+                const newTrip = new Trip({ startingPoint, endPoint, date, time, carImage, description, seats, creator: userId });
 
                 await newTrip.save();
 
-                const user = await User.findByIdAndUpdate({ _id: userId }, { $push: { trippsHistory: tripId } })
                 res.redirect('/shared-tripps');
             } catch (error) {
                 const hbsObject = {

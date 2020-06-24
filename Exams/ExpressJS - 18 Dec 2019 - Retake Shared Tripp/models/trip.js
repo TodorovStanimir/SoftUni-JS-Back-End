@@ -61,7 +61,11 @@ const TripSchema = new Schema({
     buddies: [{
         type: ObjectId,
         ref: 'User'
-    }]
+    }],
+    creator: {
+        type: ObjectId,
+        ref: 'User'
+    }
 })
 
 module.exports = mongoose.model('Trip', TripSchema);
