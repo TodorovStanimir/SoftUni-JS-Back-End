@@ -102,7 +102,7 @@ module.exports = {
                         email,
                         password,
                         rePassword,
-                        errors: [`User ${err.keyValue.email} is taken.`]
+                        errors: [`Email address ${err.keyValue.email} is taken.`]
                     };
 
                     return res.render('register.hbs', hbsObject);
