@@ -1,0 +1,25 @@
+{
+  "lastIndex": 4,
+  "users": [
+    {
+      "id": 1,
+      "email": "todorov.stanimir0803@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "email": "test@test.bg",
+      "password": "123"
+    },
+    {
+      "id": 3,
+      "email": "test1@test.bg",
+      "password": "123"
+    },
+    {
+      "id": 4,
+      "email": "test2@test.bg",
+      "password": "123"
+    }
+  ]
+}

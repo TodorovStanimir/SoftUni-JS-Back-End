@@ -1,0 +1,47 @@
+{
+  "lastIndex": 4,
+  "articles": [
+    {
+      "id": 1,
+      "title": "Arrays",
+      "category": "JavaScript",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, excepturi magnam aliquid quamest fugit ipsa quidem impedit praesentium tempore placeat numquam blanditiis fuga soluta beatae perspiciatis voluptas atque obcaecati?",
+      "imageURL": "https://media.geeksforgeeks.org/wp-content/uploads/C-Arrays.jpg",
+      "creator-email": "todorov.stanimir0803@gmail.com"
+    },
+    {
+      "id": 2,
+      "title": "Objects",
+      "category": "JavaScript",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, excepturi magnam aliquid quamest fugit ipsa quidem impedit praesentium tempore placeat numquam blanditiis fuga soluta beatae perspiciatis voluptas atque obcaecati?",
+      "imageURL": "https://miro.medium.com/max/1200/1*W5MGNZ16WYXSOxmHWNwmYw.png",
+      "creator-email": "peter.georgiev@email.com"
+    },
+    {
+      "id": 3,
+      "title": "Dictionary",
+      "category": "C#",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, excepturi magnam aliquid quamest fugit ipsa quidem impedit praesentium tempore placeat numquam blanditiis fuga soluta beatae perspiciatis voluptas atque obcaecati?",
+      "imageURL": "https://lh3.googleusercontent.com/proxy/mcVrchGX_807PIbmhOk8l5OC7NjR_8grGG-BqWYoVIgArRMiQayZ2gYt_OWaK9hJUIewXAwOmQ9-jJ58tWfge0kQ1I32lIZ40reYgiLvlC0",
+      "creator-email": "todorov.stanimir0803@gmail.com"
+    }
+  ],
+  "articlesCategory": [
+    {
+      "title": "javaScript",
+      "descr": "JavaScript"
+    },
+    {
+      "title": "cSharp",
+      "descr": "C#"
+    },
+    {
+      "title": "java",
+      "descr": "Java"
+    },
+    {
+      "title": "pyton",
+      "descr": "Pyton"
+    }
+  ]
+}

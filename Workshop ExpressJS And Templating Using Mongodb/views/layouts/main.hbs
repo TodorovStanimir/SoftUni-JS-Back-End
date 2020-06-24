@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cubicle</title>
+    <link href="/css/site.css" type="text/css" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.png' />
+</head>
+
+<body>
+    <div class="container"></div>
+    {{> header}}
+    {{#with errors}}
+    <div id="notifications">
+        <p id="notifications-message">{{username.message}}</p>
+        <p id="notifications-message">{{password.message}}</p>
+        <p id="notifications-message">{{repeatPassword.message}}</p>
+        <p id="notifications-message">{{name.message}}</p>
+        <p id="notifications-message">{{description.message}}</p>
+        <p id="notifications-message">{{imageUrl.message}}</p>
+    </div>
+    {{/with}}
+    <main>
+        {{{body}}}
+    </main>
+    {{>footer}}
+    </div>
+</body>
+
+</html>

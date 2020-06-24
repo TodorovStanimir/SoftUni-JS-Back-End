@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Black Cat",
+        "description": "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho.",
+        "breed": "Persian cat",
+        "image": "cat-694730_1280.png"
+    },
+    {
+        "id": 2,
+        "name": "Pretty Kitty",
+        "description": "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho.",
+        "breed": "Bombay Cat",
+        "image": "cat-814952_1280.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Smart cat",
+        "description": "This is the smartest cat in the world. It was born in Bulgaria.",
+        "breed": "Bulgarian cat",
+        "image": "cat-3591348_1280.jpg"
+    }
+]

@@ -1,0 +1,15 @@
+{{!-- <section style="background-color:#F08080; padding: 1%; border-radius: 6px; width: 50%; margin: 0 auto; margin-top: 5%;">
+    <p style="text-align: center; font-style: italic; font-size: 18px;"> Error Message Here... </p>
+</section> --}}
+<form action="/login" method="POST">
+    <h1>Login</h1>
+
+    <p>Personal info</p>
+    <label for="username">Username</label>
+    <input id="username" type="text" placeholder="JustMyself123..." name="username" value="{{username}}">
+
+    <label for="password">Password</label>
+    <input id="password" type="password" placeholder="********" name="password" value="{{password}}">
+
+    <button type="submit">Login</button>
+</form>

@@ -1,0 +1,61 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{pageTitle}}</title>
+    <link rel='shortcut icon' type='image/x-icon' href='/img/favicon.png' />
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <!--TODO: CHANGE-->
+</head>
+
+<body>
+    {{> header}}
+    {{#if errors}}
+    <section
+        style="background-color:#F08080; padding: 1%; border-radius: 6px; width: 50%; margin: 0 auto; margin-top: 5%;">
+        {{#each errors}}
+        <p style="text-align: center; font-style: italic; font-size: 18px;">{{this}}</p>
+        {{/each}}
+    </section>
+    {{/if}}
+    {{{ body }}}
+
+    {{> footer}}
+</body>
+
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/site.css">
+    <title>Document</title>
+</head>
+
+<body>
+    {{> header}}
+
+    <main>
+        {{#if errors}}
+        <section class="notifications">
+            {{#each errors}}
+            <p class="notification-message">{{this}}</p>
+            {{/each}}
+        </section>
+        {{/if}}
+
+        {{{body}}}
+
+    </main>
+
+    {{> footer}}
+</body>
+
+</html>

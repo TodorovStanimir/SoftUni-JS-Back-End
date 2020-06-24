@@ -1,0 +1,43 @@
+{{!-- <header>
+  {{#if isLoggedIn}}
+  <span>Welcome, {{useremail}}!</span>
+  <a href="/logout">[Logout]</a>
+  {{else}}
+  <a href="/login">Login</a>
+  <a href="/register">Register</a>
+  {{/if}}
+</header> --}}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">Video Tutorials</a>
+
+  <ul class="navbar-nav ml-auto">
+
+
+    {{#if isLoggedIn}}
+    <li class="nav-item">
+      <a class="nav-link" href="/all-courses">Home </a>
+    </li>
+    <li class="nav-link">
+      Welcome, {{username}}
+    </li>
+
+    <li class="nav-item">
+      <form id="logout-form" action="/user/logout" method="POST"></form>
+      <a class="nav-link" href="javascript:document.getElementById('logout-form').submit()">Logout</a>
+    </li>
+    {{else}}
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/user/login">Login</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/user/register">Register</a>
+    </li>
+    {{/if}}
+  </ul>
+
+</nav>

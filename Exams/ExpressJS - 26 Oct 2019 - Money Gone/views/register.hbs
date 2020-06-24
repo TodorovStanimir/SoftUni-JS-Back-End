@@ -1,0 +1,22 @@
+{{!-- <section style="background-color:#F08080; padding: 1%; border-radius: 6px; width: 50%; margin: 0 auto; margin-top: 5%;">
+    <p style="text-align: center; font-style: italic; font-size: 18px;"> Error Message Here... </p>
+</section> --}}
+<form action="/register" method="POST">
+    <h1>Register</h1>
+
+    <p>Personal info</p>
+    <label for="usernmae">Username</label>
+    <input id="username" type="text" placeholder="JustMyself123..." name="username" value="{{username}}">
+
+    <label for="password">Password</label>
+    <input id="password" type="password" placeholder="******" name="password" value="{{password}}">
+
+    <label for="repeatPassword">Repeat Password</label>
+    <input id="repeatPassword" type="password" placeholder="******" name="repeatPassword" value="{{repeatPassword}}">
+    <hr>
+    <p>Account</p>
+    <label for="amount">Amount</label>
+    <input id="amount" type="number" min="0" step="0.01" placeholder="$125.90" name="amount" value="{{amount}}">
+
+    <button type="submit">Register</button>
+</form>
